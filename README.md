@@ -10,6 +10,8 @@ In this table, create just one record and make sure all columns are formula colu
 ```
 def solve_meaning_of_life(question):
    return f"You asked '{question}' - to which the answer is, as always it must be, 42."
+
+return solve_meaning_of_life
 ```
 A "QuestionBot" column with this formula in it will get a Python function as its value. This can be called from other places within your Project, like this:
 ```
@@ -17,6 +19,16 @@ A "QuestionBot" column with this formula in it will get a Python function as its
 return CODE.lookupOne().QuestionBot.solve_meaning_of_life("Pray, what does it all mean?")
 ```
 This will put "You asked..." and so forth into the column with the above formula.
+
+You can also use classes to organize things further:
+```
+class Solver:
+   def solve_meaning_of_life(question):
+      ... (see above) ...
+
+return Solver
+```
+This may be called exactly the same way as before, but allows for having multiple functions in one column.
 
 ## Please share!
 I cordially invite every seasoned or aspiring Grister to share! Open a pull request and let's add all your little snippets, advanced calculations and all-time greats!
