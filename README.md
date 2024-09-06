@@ -1,7 +1,7 @@
 # Grist RUC - Reusable User Code
 When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that stuff I already got working somewhere else?
 
-So, at some point larger Grist projects would really benefit from a central code library. Unfortunately, Grist doesn't yet provide an elegant way of creating one, but with a bit of hackery, it can be done. Once set up, you can then stuff your library full of all the code goodness hopefully to be found here once it's all up and running, empower your formulas significantly, and stop doing the same stuff over and over again!
+So, at some point larger Grist projects would really benefit from a central code library. Unfortunately, Grist doesn't yet provide an elegant way of creating one, but with a bit of hackery, it can be done. Once set up, you can then stuff your library full of all the code goodness hopefully to be found here once it's all up and running, empower your formulas significantly, and stop doing the same things over and over again!
 
 ## Great! So how do I use this?
 In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project.
