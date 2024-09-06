@@ -1,6 +1,6 @@
 Stuff for working with widget options in Grist. Widget options are where the various column settings from the creator panel are stored.
 See [here](https://github.com/tomnitschke/gristruc/blob/main/README.md) for instructions on how to use.
-```
+```python
 import json
 from grist import Record
 
