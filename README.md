@@ -6,7 +6,7 @@ So, at some point larger Grist projects would really benefit from a central code
 ## Great! So how do I use this?
 In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project.
 
-In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means and "called" as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
+In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means, and called as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
 ```
 def solve_meaning_of_life(question):
    return f"You asked '{question}' - to which the answer is, as always it must be, 42."
