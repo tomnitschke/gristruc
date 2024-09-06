@@ -1,5 +1,5 @@
 Stuff for dealing with invalid user input into reference/reference list-type columns in Grist. See [here](https://github.com/tomnitschke/gristruc/blob/main/README.md) for instructions on how to use.
-```
+```python
 import ast, re
 from types import FunctionType
 from grist import UserTable, Record, RecordSet
