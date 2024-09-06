@@ -16,7 +16,7 @@ A "QuestionBot" column with this formula in it will get a Python function as its
 # Nota bene: Using lookupOne() without any arguments will just fetch the first record.
 return CODE.lookupOne().QuestionBot.solve_meaning_of_life("Pray, what does it all mean?")
 ```
-This will spit out "You asked..." and so forth into the column with the above formula.
+This will put "You asked..." and so forth into the column with the above formula.
 
 ## Please share!
 I cordially invite every seasoned or aspiring Grister to share! Open a pull request and let's add all you little snippets, advanced calculations and all-time greats!
