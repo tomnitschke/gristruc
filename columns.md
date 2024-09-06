@@ -1,5 +1,5 @@
 Stuff for working with columns in Grist. See [here](https://github.com/tomnitschke/gristruc/blob/main/README.md) for instructions on how to use.
-```
+```python
 from grist import UserTable, Record, RecordSet
 from docmodel import global_docmodel as gdm
 
