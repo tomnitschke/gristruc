@@ -1,6 +1,5 @@
 Stuff for working with tables in Grist. See [here](https://github.com/tomnitschke/gristruc/blob/main/README.md) for instructions on how to use.
-
-```
+```python
 from grist import UserTable
 from docmodel import global_docmodel as gdm
 
