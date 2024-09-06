@@ -7,21 +7,21 @@ So, at some point larger Grist projects would really benefit from a central code
 In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project.
 
 In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means, and called as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
-```
+```python
 def solve_meaning_of_life(question):
    return f"You asked '{question}' - to which the answer is, as always it must be, 42."
 
 return solve_meaning_of_life
 ```
 A "QuestionBot" column with this formula in it will get a Python function as its value. This can be called from other places within your Project, like this:
-```
+```python
 # Nota bene: Using lookupOne() without any arguments will just fetch the first record.
 return CODE.lookupOne().QuestionBot.solve_meaning_of_life("Pray, what does it all mean?")
 ```
 This will put "You asked..." and so forth into the column with the above formula.
 
 You can also use classes to organize things further:
-```
+```python
 class Solver:
    def solve_meaning_of_life(question):
       ... (see above) ...
