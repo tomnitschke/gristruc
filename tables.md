@@ -1,4 +1,4 @@
-Stuff for working with tables in Grist. See [WIP: HERE] for instructions on how to use these.
+Stuff for working with tables in Grist. See [here](https://github.com/tomnitschke/gristruc/blob/main/README.md) for instructions on how to use.
 
 ```
 from grist import UserTable
