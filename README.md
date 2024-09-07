@@ -1,7 +1,9 @@
 # Grist RUC - Reusable User Code
 When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that stuff I already got working somewhere else?
 
-So, at some point larger Grist projects would really benefit from a central code library. Unfortunately, Grist doesn't yet provide an elegant way of creating one, but with a bit of hackery, it can be done. Once set up, you can then stuff your library full of all the code goodness hopefully to be found here once it's all up and running, empower your formulas significantly, and stop doing the same things over and over again!
+Here's a typical example to illustrate. Let's say your users like to enter people's names in one go like "Smith, John". Being the kind of data modelling person the average Grister probably is, you'd like to split that up into a proper "last name" and "first name" column. It's not hard to do, but you'll have to copy-paste a formula for doing it every time an input situation like that occurs in your tables. So, why not write _one_ function "parse_usernames_properly_once_and_for_all()" and put that in a central code table, which we can then just reference from the actual formulas as needed? That's actually possible, and it's what this repo is about.
+
+So, at some point larger Grist projects would really benefit from a central code library. Unfortunately, Grist doesn't yet provide an elegant way of creating one, but with a bit of hackery, it can be done. Essentially, we'll be setting up a separate table that's just full of useful, universally reusable Python code. Once set up, your formulas can utilise it as a central library and stop re-inventing the wheel every single time.
 
 ## Great! So how do I use this?
 In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project.
