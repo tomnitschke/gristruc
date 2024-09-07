@@ -13,7 +13,8 @@ def solve_meaning_of_life(question):
 
 return solve_meaning_of_life
 ```
-A "QuestionBot" column with this formula in it will get a Python function as its value. This can be called from other places within your Project, like this:
+### Calling the code from within formulas
+A "QuestionBot" column with the above formula in it will get a Python function as its value. This can be called from other places within your Project, like this:
 ```python
 # Nota bene: Using lookupOne() without any arguments will just fetch the first record.
 return CODE.lookupOne().QuestionBot.solve_meaning_of_life("Pray, what does it all mean?")
