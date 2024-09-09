@@ -23,7 +23,8 @@ class Relation:
     Alternatively, if 'make_flat' is True, return a flat list of referring records.
     """
     result = [] if make_flat else {}
-    for foreign_table in $Table.get_all() if not table_to_query else [table_to_query]:
+    foreign_tables = [table_to_query] if table_to_query else [t for t in $Table.get_all() if t != record._table.user_table]
+    for foreign_table in foreign_tables:
       foreign_table_name = foreign_table.table.table_id
       for referring_col in cls.get_referring_columns(record, foreign_table):
         referring_col_name = referring_col.colId
