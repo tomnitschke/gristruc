@@ -26,7 +26,7 @@ class Record:
   @classmethod
   def get_fields(cls, record: Record) -> list[str]:
     """Get all fields/aka column names from a 'record'. This excludes Grist-internal invisible columns like "manualSort"."""
-    return [field for field in dir(record) if not field.startswith(("#","_")) and not field in ("id", "manualSort")]
+    return [field for field in dir(record) if not field.startswith(("#","_","gristHelper_")) and not field in ("id", "manualSort")]
 
 
 return Record
