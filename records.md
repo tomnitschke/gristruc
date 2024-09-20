@@ -24,9 +24,9 @@ class Record:
     gdm.update([record], **fields)
   
   @classmethod
-  def get_fields(cls, record: Record) -> list[str]:
+  def get_fields(cls, record: Record, include_internals: bool=False) -> list[str]:
     """Get all fields/aka column names from a 'record'. This excludes Grist-internal invisible columns like "manualSort"."""
-    return [field for field in dir(record) if not field.startswith(("#","_","gristHelper_")) and not field in ("id", "manualSort")]
+    return [field for field in dir(record) if include_internals or (not field.startswith(("#","_","gristHelper_")) and not field in ("id", "manualSort"))]
 
 
 return Record
