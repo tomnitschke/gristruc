@@ -20,7 +20,11 @@ class Column:
   
   @classmethod
   def get_all(cls, table: UserTable|str, get_as_names: bool=False, include_internals: bool=False) -> RecordSet:
-    """Get all columns in the given 'table'."""
+    """
+    Get all columns in the given 'table'.
+    Optionally get just the column names ('get_as_names' = True).
+    Optionally also 'include_internals' like 'manualSort' and the like.
+    """
     table_name = table if isinstance(table, str) else (table.table if isinstance(table, UserTable) else table).table_id
     colrecs = _grist_Tables_column.lookupRecords(tableId=table_name)
     return [(cr.colId if get_as_names else cr) for cr in colrecs if not cr.colId.startswith(("#","_","gristHelper_")) and not cr.colId in ("id", "manualSort")]
