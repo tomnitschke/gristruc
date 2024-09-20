@@ -48,18 +48,23 @@ class WidgetOptions:
     return cls.set(colrec, widget_options)
 
   @classmethod
-  def add_choice(cls, colrec: Record, item: str) -> None:
-    """ Shortcut to get widget options, update the 'choices' list with a new 'item' (if it doesn't exist), then set the new widget options. """
+  def add_choice(cls, colrec: Record, item: str) -> bool:
+    """
+    Shortcut to get widget options, update the 'choices' list with a new 'item'
+    (if it doesn't exist), then set the new widget options. Returns True if the
+    item was added, otherwise False.
+    """
     item = str(item).strip()
     if not item:
-      return
+      return False
     widget_options = cls.get(colrec)
     choices = widget_options["choices"]
     if item in choices:
-      return
+      return False
     choices.append(item)
     widget_options["choices"] = choices
     cls.set(colrec, widget_options)
+    return True
 
 
 
