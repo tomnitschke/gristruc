@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'Input'.
+
 import ast, re
 from types import FunctionType
 from grist import UserTable, Record, RecordSet
