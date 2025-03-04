@@ -1,4 +1,6 @@
 # Grist RUC - Reusable User Code
+```TLDR: These are ready-made formulas for getting advanced stuff done in [Grist](https://www.getgrist.com). Feel free to copy-paste them into your Grist document.```
+
 When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that stuff I already got working somewhere else?
 
 Here's a typical example to illustrate. Let's say your users like to enter people's names in one go like "Smith, John". Being the kind of data modelling person the average Grister probably is, you'd like to split that up into a proper "last name" and "first name" column. It's not hard to do, but you'll have to copy-paste a formula for doing it every time an input situation like that occurs in your tables. So, why not write _one_ function "parse_usernames_properly_once_and_for_all()" and put that in a central code table, which we can then just reference from the actual formulas as needed?
@@ -6,9 +8,14 @@ Here's a typical example to illustrate. Let's say your users like to enter peopl
 So, at some point larger Grist projects would really benefit from a central code library. Unfortunately, Grist doesn't yet provide an elegant way of creating one, but with a bit of hackery, it can be done. Essentially, we'll be setting up a separate table that's just full of useful, universally reusable Python code. Once in place, your formulas can utilise it as a central library and stop re-inventing the wheel every single time.
 
 ## Great! So how do I use this?
-In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project.
+In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project. Unsurprisingly, I named mine "RUC".
 
-In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means, and called as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
+In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. Go to the 'code' folder and pick whatever you like, pasting the contents into an appropriately named formula column. For example, you might create a formula column called 'Relation', then paste the contents of ```code/relation.py``` into it.
+
+You may then use the methods contained in 'relation.py' by referring to your column. For example, to invoke the 'get_referring_columns' method - and supposing your table is named 'RUC', like mine - you can do this: ```RUC.lookupOne().Relation.get_referring_columns(...arguments go here...)```
+
+## Why does this work?
+The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means, and called as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
 ```python
 def solve_meaning_of_life(question):
    return f"You asked '{question}' - to which the answer is, as always it must be, 42."
@@ -31,6 +38,8 @@ class Solver:
 
 return Solver
 ```
+
+And that's all the RUC does, really. It's basically a collection of the most useful results from years of in-depth Grist hackery. Enjoy! :D
 This may be called exactly the same way as before, but allows for having multiple functions in one column.
 
 ## Please share!
