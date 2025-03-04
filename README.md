@@ -38,8 +38,9 @@ class Solver:
 return Solver
 ```
 
-And that's all the RUC does, really. It's basically a collection of the most useful results from years of in-depth Grist hackery. Enjoy!
 This may be called exactly the same way as before, but allows for having multiple functions in one column.
+
+Technically, that's all the RUC does, really. It's basically a collection of the most useful results from years of in-depth Grist hackery. Enjoy!
 
 ## Please share!
 I cordially invite every seasoned or aspiring Grister to share! Open a pull request and let's add all your little snippets, advanced calculations and all-time greats!
