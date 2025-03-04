@@ -10,9 +10,9 @@ So, at some point larger Grist projects would really benefit from a central code
 ## Great! So how do I use this?
 In your Grist document, create a new table. Give it a name like "Lib" or "Code" or something that both makes sense and is fast to type! It might be a good idea to name it in ALL-CAPS to make it stick out against regular tables in your project. Unsurprisingly, I named mine "RUC".
 
-In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. Go to the 'code' folder and pick whatever you like, pasting the contents into an appropriately named formula column. For example, you might create a formula column called 'Relation', then paste the contents of ```code/relation.py``` into it.
+In this table, create just one record and make sure all columns are formula columns. This is where you paste the code from this repo. Go to the 'code' folder and pick whatever you like, pasting the contents into an appropriately named formula column.
 
-You may then use the methods contained in 'relation.py' by referring to your column. For example, to invoke the 'get_referring_columns' method - and supposing your table is named 'RUC', like mine - you can do this: ```RUC.lookupOne().Relation.get_referring_columns(...arguments go here...)```
+For example, you might create a formula column called 'Relation', then paste the contents of ```code/relation.py``` into it. You may then use the methods contained in 'relation.py' by referring to your column. For example, to invoke the 'get_referring_columns' method - and supposing your table is named 'RUC', like mine - you can do this: ```RUC.lookupOne().Relation.get_referring_columns(...arguments go here...)```
 
 ## Why does this work?
 The trick is to have a formula column spit out something that can be _called_ rather than an actual value. This allows the column to be referenced by Grist's usual means, and called as if it were a normal Python function. To illustrate, here's an example formula column, let's call it "QuestionBot", as part of a table named "CODE":
