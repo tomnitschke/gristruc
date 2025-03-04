@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'ColumnOptions'.
+
 import json
 from grist import Record
 
