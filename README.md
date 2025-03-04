@@ -22,7 +22,6 @@ def solve_meaning_of_life(question):
 
 return solve_meaning_of_life
 ```
-### Calling the code from within formulas
 A "QuestionBot" column with the above formula in it will get a Python function as its value. This can be called from other places within your Project, like this:
 ```python
 # Nota bene: Using lookupOne() without any arguments will just fetch the first record.
@@ -39,7 +38,7 @@ class Solver:
 return Solver
 ```
 
-And that's all the RUC does, really. It's basically a collection of the most useful results from years of in-depth Grist hackery. Enjoy! :D
+And that's all the RUC does, really. It's basically a collection of the most useful results from years of in-depth Grist hackery. Enjoy!
 This may be called exactly the same way as before, but allows for having multiple functions in one column.
 
 ## Please share!
