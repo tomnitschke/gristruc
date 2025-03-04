@@ -1,7 +1,7 @@
 # Grist RUC - Reusable User Code
 ```TLDR: These are ready-made formulas for getting advanced stuff done in```[Grist](https://www.getgrist.com)```. Feel free to copy-paste them into your Grist document.```
 
-When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that stuff I already got working somewhere else?
+When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that one solution I already have working in one spot somewhere else, too?
 
 Here's a typical example to illustrate. Let's say your users like to enter people's names in one go like "Smith, John". Being the kind of data modelling person the average Grister probably is, you'd like to split that up into a proper "last name" and "first name" column. It's not hard to do, but you'll have to copy-paste a formula for doing it every time an input situation like that occurs in your tables. So, why not write _one_ function "parse_usernames_properly_once_and_for_all()" and put that in a central code table, which we can then just reference from the actual formulas as needed?
 
