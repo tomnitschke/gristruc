@@ -1,5 +1,5 @@
 # Grist RUC - Reusable User Code
-```TLDR: These are ready-made formulas for getting advanced stuff done in [Grist](https://www.getgrist.com). Feel free to copy-paste them into your Grist document.```
+```TLDR: These are ready-made formulas for getting advanced stuff done in```[Grist](https://www.getgrist.com)```. Feel free to copy-paste them into your Grist document.```
 
 When working with [Grist](https://www.getgrist.com) on an advanced level, there inevitably comes a moment when you find you're repeating yourself. Formulas doing the same kind of thing, or roughly the same thing, start appearing everywhere and you're wondering, couldn't I re-use that stuff I already got working somewhere else?
 
