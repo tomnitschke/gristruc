@@ -1,4 +1,4 @@
-# Paste below into a formula column called 'get_current_node'
+# Paste below into a formula column called 'get_current_node'.
 
 import grist
 import inspect
