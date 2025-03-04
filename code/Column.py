@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'Column'.
+
 import useractions
 from grist import UserTable, Record, RecordSet
 from docmodel import global_docmodel as gdm
