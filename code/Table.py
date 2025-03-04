@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'Table'.
+
 import useractions
 from grist import UserTable
 from table import Table
