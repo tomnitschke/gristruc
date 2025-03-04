@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'Record'.
+
 from grist import UserTable, Record
 from engine import OrderError
 from docmodel import global_docmodel as gdm
