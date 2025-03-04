@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'ColumnMeta'.
+
 from grist import UserTable
 from column import BaseColumn
 
