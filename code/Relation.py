@@ -1,3 +1,5 @@
+# Paste below into a formula column called 'Relation'.
+
 from grist import Record, RecordSet, UserTable
 
 class Relation:
