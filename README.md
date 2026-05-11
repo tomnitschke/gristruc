@@ -1,3 +1,8 @@
+# This repo is now deprecated.
+See [the Grist Creators forums](https://community.getgrist.com/t/ruc-2-0-is-here/13769?u=tomnit) or [this Grist document](https://docs.getgrist.com/7yw2DY7RN1pG/GristDev?utm_id=share-doc) for the up-to-date version.
+
+
+
 # Grist RUC - Reusable User Code
 ```TLDR: These are ready-made formulas for getting advanced stuff done in```[Grist](https://www.getgrist.com)```. Feel free to copy-paste them into your Grist document.```
 
